@@ -19,7 +19,7 @@ class Routes extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL || null}>
         <NavBar />
         <Switch>
             <Route exact path="/" component={LandingPage} />
