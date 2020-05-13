@@ -20,11 +20,11 @@ class LandingPage extends Component {
                 </Link>
               </Col>
               <Col>
-                <Link to="/logo">
+                <a href="https://github.com/normanjayasubrata/stickerapp" rel="noopener noreferrer" target="_blank">
                   <Button style={{ marginRight: "1rem" }} variant="primary">
                     Frontend Github
                   </Button>
-                </Link>
+                </a>
                 <a href="https://github.com/normanjayasubrata/stickersapi" rel="noopener noreferrer" target="_blank">
                   <Button variant="primary">Backend Github</Button>
                 </a>
