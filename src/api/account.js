@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { getToken } from "../utils/token";
-const API_URL = "/api/v1/accounts";
+const proxy = "https://stickersapi.herokuapp.com";
+const API_URL = process.env.NODE_ENV === "production" ? proxy + "/api/v1/accounts" : "/api/v1/accounts";
 
 export const getAccount = () => {
     return axios.get(`${API_URL}/`)
