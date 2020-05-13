@@ -10,6 +10,8 @@ const port = normilizePort(process.env.PORT || "3000");
 const app = express();
 const dev = app.get("env") !== "production";
 
+console.log("environtment",process.env)
+
 if (!dev) {
     app.disable("x-powered-by");
     app.use(compression());

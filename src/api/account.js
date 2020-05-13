@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getToken } from "../utils/token";
-const proxy = process.env.PROXY;
-const API_URL = process.env.NODE_ENV === "production" ? proxy + "/api/v1/accounts" : "/api/v1/accounts";
+const proxy = process.env.NODE_ENV === "production" ?  "https://stickersapi.herokuapp.com" : "http://localhost:5000";
+const API_URL = proxy + "/api/v1/accounts";
 
 export const getAccount = () => {
     return axios.get(`${API_URL}/`)
@@ -12,8 +12,6 @@ export const FetchAccount = () => {
 }
 
 export const AccountLogin = (payload) => {
-console.log("account", process.env)
-
     return axios.post(`${API_URL}/login`, payload)
 }
 
