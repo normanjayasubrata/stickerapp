@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { getToken } from "../utils/token";
-// const proxy = process.env.NODE_ENV === "production" ?  "https://stickersapi.herokuapp.com" : "http://localhost:3000";
-const proxy = "http://localhost:3000";
+const proxy = process.env.NODE_ENV === "production" ?  "https://stickersapi.herokuapp.com" : "http://localhost:3000";
 const API_URL = proxy + "/api/v1/accounts";
 
 export const getAccount = () => {
